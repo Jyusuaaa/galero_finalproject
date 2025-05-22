@@ -1,1 +1,1 @@
-# galero_finalproject
+GALERO FINAL PROJECT
