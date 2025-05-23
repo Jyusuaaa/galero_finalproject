@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
   <style>
     body {
@@ -11,55 +11,104 @@
       padding: 0;
       background-color: powderblue;
     }
+
     header {
       background-color: #333;
       color: #fff;
-      padding: 1em 0;
-      text-align: center;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .profile-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 10px;
+    }
+
     nav a {
       color: #fff;
-      margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
       padding: 20px;
     }
+
     .project, .job, .blog {
       background-color: white;
       padding: 15px;
       margin-bottom: 15px;
       border-radius: 8px;
     }
-    img {
+
+    img.project-img {
       max-width: 100%;
       height: auto;
       border-radius: 5px;
     }
+
     footer {
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 5px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #0645AD;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
   <header>
-  <img src="https://scontent.filo1-1.fna.fbcdn.net/v/t39.30808-6/468402528_2267301743636138_7842298226203222488_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=cHIj1yHUOE0Q7kNvwFIS6Uh&_nc_oc=Adn64aG_faLT_ia2FrA0s9AVjsF5vFSO-4Ms2MDxTXUCanHXrbX6odfyACmzCmW4r9A&_nc_zt=23&_nc_ht=scontent.filo1-1.fna&_nc_gid=ZskgLcLZR-pVx6aWpcFoFQ&oh=00_AfKZ4HSnIt0mpaxndZ2_m8ptcisGHHyspBwDO-pjs0VUfA&oe=6835D4CA" 
-       alt="Profile Picture" class="profile-pic">
-  <h1>Welcome to My Portfolio</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Work Experience</a>
-    <a href="#blog">Blog</a>
-  </nav>
-</header>
+    <div class="header-left">
+      <img src="https://scontent.filo1-1.fna.fbcdn.net/v/t39.30808-6/468402528_2267301743636138_7842298226203222488_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=cHIj1yHUOE0Q7kNvwFIS6Uh&_nc_oc=Adn64aG_faLT_ia2FrA0s9AVjsF5vFSO-4Ms2MDxTXUCanHXrbX6odfyACmzCmW4r9A&_nc_zt=23&_nc_ht=scontent.filo1-1.fna&_nc_gid=ZskgLcLZR-pVx6aWpcFoFQ&oh=00_AfKZ4HSnIt0mpaxndZ2_m8ptcisGHHyspBwDO-pjs0VUfA&oe=6835D4CA" 
+        alt="Profile Picture" class="profile-pic">
+      <h1>Welcome to My Portfolio</h1>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Work Experience</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
 
   <section id="home">
     <h2>About Me</h2>
@@ -69,10 +118,10 @@
   <section id="contact">
     <h2>Contact</h2>
     <div class="project">
-    <p>Email: poygalero24@gmail.com</p>
-    <p>Phone: 09560011008</p>
-    <p>LinkedIn: <a href="#">https://www.facebook.com/PoyGalero</a></p>
-    <p>GitHub: <a href="#">https://github.com/Jyusuaaa/galero_finalproject</a></p>
+      <p>Email: poygalero24@gmail.com</p>
+      <p>Phone: 09560011008</p>
+      <p>Facebook: <a href="https://www.facebook.com/PoyGalero" target="_blank">Poy Galero</a></p>
+      <p>GitHub: <a href="https://github.com/Jyusuaaa/galero_finalproject" target="_blank">galero_finalproject</a></p>
     </div>
   </section>
 
@@ -80,12 +129,14 @@
     <h2>Projects</h2>
     <div class="project">
       <h3>Project One</h3>
-      <img src="https://scontent.filo1-1.fna.fbcdn.net/v/t1.15752-9/401272342_731386585542899_4975778386948938426_n.png?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=FFm4N189VQ4Q7kNvwFN37LU&_nc_oc=AdkePhEtY3zgnI-sPXlnS4VTDIKQRsk7CdR2QFNBIsjnGeudvHI8orT75rCwiEfTIBw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.filo1-1.fna&oh=03_Q7cD2QEQg2odMLyd8G7W0vFjtX7fFervCnVYQqALRP9ZWb6f-Q&oe=68576321" alt="Project One Screenshot" width="500" height="600">
+      <img src="https://scontent.filo1-1.fna.fbcdn.net/v/t1.15752-9/401272342_731386585542899_4975778386948938426_n.png?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=FFm4N189VQ4Q7kNvwFN37LU&_nc_oc=AdkePhEtY3zgnI-sPXlnS4VTDIKQRsk7CdR2QFNBIsjnGeudvHI8orT75rCwiEfTIBw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.filo1-1.fna&oh=03_Q7cD2QEQg2odMLyd8G7W0vFjtX7fFervCnVYQqALRP9ZWb6f-Q&oe=68576321" 
+           alt="Project One Screenshot" class="project-img">
       <p>It was my first project created for my family business.</p>
     </div>
     <div class="project">
       <h3>Project Two</h3>
-      <img src="https://scontent.filo1-1.fna.fbcdn.net/v/t1.15752-9/413849081_383162877715344_5063586806265324885_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9XSfKn9pai0Q7kNvwGDQxJh&_nc_oc=Adn5HwcrKsggvKQNs-j8QZbRoKgl5wDtU5xKVgO-pqicQ7TubZ60ZHuBFtVr7nTxyTc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.filo1-1.fna&oh=03_Q7cD2QELD-A3js-_whqjo84uNm4UdOgQfKJcd5CgScm469JkKA&oe=685775E2" alt="Project Two Screenshot" width="500" height="100">
+      <img src="https://scontent.filo1-1.fna.fbcdn.net/v/t1.15752-9/413849081_383162877715344_5063586806265324885_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9XSfKn9pai0Q7kNvwGDQxJh&_nc_oc=Adn5HwcrKsggvKQNs-j8QZbRoKgl5wDtU5xKVgO-pqicQ7TubZ60ZHuBFtVr7nTxyTc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.filo1-1.fna&oh=03_Q7cD2QELD-A3js-_whqjo84uNm4UdOgQfKJcd5CgScm469JkKA&oe=685775E2" 
+           alt="Project Two Screenshot" class="project-img">
       <p>This was a mobile app project from Sir Lenon Pajar.</p>
     </div>
   </section>
@@ -121,5 +172,6 @@
   <footer>
     <p>&copy; 2025 My Portfolio. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
